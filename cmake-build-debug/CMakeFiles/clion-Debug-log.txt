@@ -1,0 +1,15 @@
+C:\Users\mukch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -S C:\Users\mukch\GitHub\nebby -B C:\Users\mukch\GitHub\nebby\cmake-build-debug
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.26100.
+CMake Error at CMakeLists.txt:20 (find_package):
+  Could not find a package configuration file provided by "fmt" with any of
+  the following names:
+
+    fmtConfig.cmake
+    fmt-config.cmake
+
+  Add the installation prefix of "fmt" to CMAKE_PREFIX_PATH or set "fmt_DIR"
+  to a directory containing one of the above files.  If "fmt" provides a
+  separate development package or SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
