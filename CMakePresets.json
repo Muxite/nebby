@@ -7,7 +7,7 @@
   },
   "configurePresets": [
     {
-      "name": "nebby-mac",
+      "name": "nebby-osx",
       "displayName": "Nebby Dev Preset",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
@@ -18,21 +18,41 @@
       }
     },
     {
-      "name": "nebby",
+      "name": "nebby-win",
       "displayName": "Nebby Dev Preset",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_TARGET_TRIPLET": "x64-windows"
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
+      }
+    },
+    {
+      "name": "nebby-linux",
+      "displayName": "Nebby Dev Preset",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-linux"
       }
     }
+
   ],
   "buildPresets": [
     {
-      "name": "nebby",
-      "configurePreset": "nebby"
+      "name": "nebby-linux",
+      "configurePreset": "nebby-linux"
+    },
+    {
+      "name": "nebby-osx",
+      "configurePreset": "nebby-osx"
+    },
+    {
+      "name": "nebby-win",
+      "configurePreset": "nebby-win"
     }
   ]
 }

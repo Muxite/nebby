@@ -9,4 +9,4 @@ echo "== Bootstrapping vcpkg =="
 ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
 
 echo "== Installing dependencies =="
-./vcpkg/vcpkg install --triplet x64-osx
+./vcpkg/vcpkg install --triplet x64-linux
