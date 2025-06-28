@@ -2,3 +2,4 @@
 /build/
 /CMakeCache.txt
 /vcpkg-lock.json
+/cmake-build-debug/
